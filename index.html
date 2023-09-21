@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Credit Card</title>
+    <link rel="stylesheet" href="style.css" type="text/CSS" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="frontcard">
+        <p class="numbercard">0000 0000 0000 0000</p>
+        <div class="date">
+          <p class="namecard">NAME LASTNAME</p>
+          <p class="expmonth">MM</p>
+          <p class="slash">/</p>
+          <p class="expyear">YY</p>
+        </div>
+      </div>
+
+      <div class="backcard">
+        <p class="cvc">000</p>
+      </div>
+    </div>
+
+    <form>
+      <div id="form" class="form">
+        <div class="container1">
+          <label>CARD HOLDER NAME </label>
+          <input
+            type="text"
+            class="type1"
+            maxlength="14"
+            placeholder="e.g.Andres Rangel"
+            id="textname"
+            pattern="[A-Z]"
+          />
+          <p class="errorname"></p>
+        </div>
+
+        <div class="container2">
+          <label>CARD NUMBER</label>
+          <input
+            type="text"
+            class="type1"
+            maxlength="19"
+            id="number1"
+            placeholder="e.g 1234 5678 9101 1213"
+          />
+          <p class="errornumber"></p>
+        </div>
+
+        <div class="container3">
+          <div class="container3-1">
+            <label>EXP.DATE(MM/YY)</label>
+            <label>CVC</label>
+          </div>
+
+          <div class="container3-2">
+            <input type="text" maxlength="2" class="type2" placeholder="MM" />
+            <input
+              type="text"
+              maxlength="2"
+              class="type21"
+              id="YY"
+              placeholder="YY"
+            />
+            <input
+              type="text"
+              class="type3"
+              maxlength="3"
+              placeholder="e.g 123"
+            />
+          </div>
+
+          <div class="container3-3">
+            <p class="errorMM"></p>
+            <p class="errorYY"></p>
+            <p class="errorcvc"></p>
+          </div>
+        </div>
+
+        <input
+          value="Confirm"
+          type="submit"
+          class="button"
+          onclick="isComplete();"
+          id="button"
+        />
+      </div>
+    </form>
+
+    <div class="advertisement" id="message">
+      <img src="icon-complete.svg" class="check" />
+      <h1>THANK YOU!</h1>
+      <p>We've added your card details.</p>
+      <button type="submit" onclick="backto();">Continue</button>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
